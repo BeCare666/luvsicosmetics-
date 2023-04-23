@@ -1,5 +1,5 @@
-var usernamep = "auprogramme"
-var passwordp = "auprogramme123++"
+var usernamep = "luvsicosmetics"
+var passwordp = "luvsicosmetics123++"
 var tableauTotakeidd = []
 function connect() {
     const username = document.getElementById('idusername').value;
@@ -9,7 +9,7 @@ function connect() {
     if (username === usernamep && password === passwordp) {
         //console.log('kodlsjfnsb,')
         setTimeout(() => {
-            alert("AU-PROGRAMME s'est bien connecté")
+            alert("luvsicosmetics s'est bien connecté")
             var codesecret = "YESDATA2023"
             tableauTotakeidd.push(codesecret)
             const lastk = tableauTotakeidd.slice(-1).pop();
