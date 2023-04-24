@@ -34,7 +34,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top header-inner-pages">
       <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a href="index.html"><img src="assets/img/WhatsApp Image 2023-04-21 at 18.20.27.jpeg" class="img-fluid animated" alt="" style="height: 12vh;"></a></h1>
+        <h1 class="logo"><a href="index.html"><img src="assets/img/mylogolu.jpeg" class="img-fluid animated" alt="" style="height: 12vh;"></a></h1>
         <nav id="navbar" class="navbar">     
             <ul>
               <li><a class="nav-link scrollto" href="index.html">Accueil</a></li>
@@ -77,7 +77,7 @@
           <div class="row">
   
             <div class="col-lg-4 col-md-6 footer-contact">
-              <h3><img src="assets/img/WhatsApp Image 2023-04-21 at 18.20.27.jpeg" class="img-fluid animated" alt="" style="height: 23vh;"></h3>
+              <h3><img src="assets/img/mylogolu.jpeg" class="img-fluid animated" alt="" style="height: 23vh;"></h3>
               <p>
               Maison FÉLIX HAZOUME, <br>Foun-Foun Tokpa, <br>Porto-Novo<br>
                Bénin <br>
@@ -138,7 +138,8 @@
                 callback: "javascript:sendmycommandinCentremodale()",
                 data: "",
                 theme: "blue",
-                key: "deb48fc468f8e7fcc35aee7ae721254a3427f5e5",
+                sandbox: "true",
+                key: "a48b12f0e28c11edb3ec35fd327c7402",
               });
       }
      }
@@ -212,8 +213,8 @@
                       <ul>
                         <li style="color: aliceblue;"><strong> Nom</strong> : ${snapshot.val().NameOfstd}</li><hr style="color: blue;">             
                         <li style="color: aliceblue;"><strong>Catégorie</strong>: ${snapshot.val().Category}</li><hr style="color: blue;">
-                        <li style="color: aliceblue;"><strong>Prix </strong> : <a href="#"> ${snapshot.val().PrixPromo} FCFA</a></li><hr style="color: blue;">
-                        <li style="color: aliceblue;"><strong>Prix promo</strong> : <a href="#">${snapshot.val().Prix}  FCFA</a></li><hr style="color: blue;">
+                        <li style="color: aliceblue;"><strong>Prix promo </strong> : <a href="#"> ${snapshot.val().PrixPromo} FCFA</a></li><hr style="color: blue;">
+                        <li style="color: aliceblue;"><strong>Prix </strong> : <a href="#">${snapshot.val().Prix}  FCFA</a></li><hr style="color: blue;">
                       </ul>
                       <div id="faq" class="faq">
                       <div class="">
@@ -240,11 +241,8 @@
                     <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <!-- Toogle to second dialog -->
-                        <button class="btn btn-danger myClasidpayer" data-bs-dismiss="modal" id="${snapshot.val().Prix}"onclick="tacketselectid(this.id)">
-                          <i class="bi bi-credit-card-fill"></i>
-                            Tiket Simple</button><br>
                         <button class="btn btn-primary myClasidpayer" data-bs-dismiss="modal"
-                          id="${snapshot.val().PrixPromo}" onclick="tacketselectid(this.id)"> <i class="bi bi-credit-card-fill"></i> Tiket VIP</button>
+                          id="${snapshot.val().PrixPromo}" onclick="tacketselectid(this.id)"> <i class="bi bi-credit-card-fill"></i>  Confirmez le paiement</button>
                       </div>
                     </div>
                   </div>
