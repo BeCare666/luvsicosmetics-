@@ -46,7 +46,7 @@
           <li><a class="nav-link scrollto" href="#about">À propos</a></li>
           <li><a class="nav-link scrollto " href="produits.html">Produits</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="produits.html#mycontactId">Contact</a></li>
           <!--<li><a class="getstarted scrollto" href="#features">Commencer</a></li>-->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -528,7 +528,7 @@
     </section><!-- End Frequently Asked Questions Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact section-bg">
+    <section id="contact" class="contact section-bg" style="display: none;">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -899,45 +899,7 @@
 
 
 
-    //funcion to pay for kkiapay
-    var MyClasidpayer = document.querySelectorAll('.myClasidpayer');
-    MyClasidpayer.forEach((x) => {
-      x.addEventListener('click', function () {
-        const lastkkiapay = tabletesterSiLa.slice(-1).pop();
-        const dbref = ref(db);
-        //console.log(lastA)
-        get(child(dbref, "Thedatas/" + lastkkiapay))
-          .then((snapshot) => {
-            if (snapshot.exists()) {
-              openKkiapayWidget({
-                amount: `${snapshot.val().PrixPromo}`,
-                position: "center",
-                callback: "javascript:sendmycommandinCentremodale()",
-                data: "",
-                theme: "blue",
-                key: "deb48fc468f8e7fcc35aee7ae721254a3427f5e5",
-              });
-              //la reponse du payement kkiapay
-              addSuccessListener((response) => {
-                console.log(response);
-                var trans = response.transactionId;
-                //  console.log(trans);
-                if (trans) {
-                  localStorage.setItem("storageName", trans);
-                  window.location.href = "formation.html";
-                } else {
-                  alert(`quelque chose s'est mal passé`);
-                }
-              });
-            } else {
-              alert("no data");
-            }
-          })
-          .catch((error) => {
-            alert("il y a une ERROR " + error);
-          });
-      })
-    })
+    
 
   </script>
   <!-- Vendor JS Files -->
